@@ -1,11 +1,11 @@
-# ⚡ [Enamel] – MetaTrader 5 Expert Advisor
+# 🦷 Enamel – MetaTrader 5 Expert Advisor
 
 [![Made with MQL5](https://img.shields.io/badge/Made%20with-MQL5-blue.svg)](https://www.mql5.com/en/docs)   
 [![GitHub stars](https://img.shields.io/github/stars/DocProvolone/Enamel.svg?style=social)](https://github.com/DocProvolone/Enamel/stargazers)
 
 ---
 
-## 🚀 Introduction
+## 🔍 Introduction
 **Enamel** is a free, open-source Expert Advisor for **MetaTrader 5 (MT5)**.  
 It is designed to **trade selected USD pairs, using a "Trend Pullback" strategy, giving users full customization over its parameters both in trading logic and risk management**.
 
@@ -31,7 +31,7 @@ or install the pre-compiled `.ex5` Expert Advisors using the instructions below.
 2. Select a version compatible with your CPU:  
       The EA is compiled for both AVX2 capable processors (a more optimized, faster and more energy hungry version)  
       and non-comptabile X64 processors.  
-      You can check your producer supported instructions set using free tools such as CPU-Z from CPUID (link to official website: https://www.cpuid.com/softwares/cpu-z.html)  
+      You can check your producer supported instructions set using free tools such as CPU-Z from CPUID (link to official website: https://www.cpuid.com/softwares/cpu-z.html )  
       If in doubt, or don't want to check your producer compatibility, use the X64 version.  
 3. Copy the selected EA file (either AVX2 or X64) into your MT5 Experts folder:  
    ` MQL5/Exeprts/ `  
@@ -49,6 +49,13 @@ or install the pre-compiled `.ex5` Expert Advisors using the instructions below.
 5. You will be asked if you' d like or not to "Optimize" before compiling, you can find out more about MQL5 on-IDE optimization here: https://www.metatrader5.com/en/metaeditor/help/mql5storage/projects#properties  
 6. You should now choose which instruction set to use for compiling.  
    MQL5 offers 3 different Intel Advanced Vector Extensions (AVX) instruction sets or a X64 regular one. You can find out more on Intel's official website  
-   If wondering about your producer instructions sets compatibility, you can use free tools such as CPU-Z (link: https://www.cpuid.com/softwares/cpu-z.html)  
+   If wondering about your producer instructions sets compatibility, you can use free tools such as CPU-Z (link: https://www.cpuid.com/softwares/cpu-z.html )  
 7. After compiling successfully, you can now use and optimize the EA!  
 
+---
+
+## 📩 Using the EA  
+
+⚠️ **Caution:** It is highly recommended to first tune and optimize parameters BEFORE using the EA. It is also *highgly* recommended to first test the EA in a DEMO scenario for several time before switching to live-trading.  
+    Expert Advisors are a magnificent and powerfull tool, use them with responsibility.  
+  

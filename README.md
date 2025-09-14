@@ -1,14 +1,13 @@
 # ⚡ [Enamel] – MetaTrader 5 Expert Advisor
 
-[![Made with MQL5](https://img.shields.io/badge/Made%20with-MQL5-blue.svg)](https://www.mql5.com/en/docs)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/your-ea-repo.svg?style=social)](https://github.com/yourusername/your-ea-repo/stargazers)
+[![Made with MQL5](https://img.shields.io/badge/Made%20with-MQL5-blue.svg)](https://www.mql5.com/en/docs)   
+[![GitHub stars](https://img.shields.io/github/stars/DocProvolone/Enamel.svg?style=social)](https://github.com/DocProvolone/Enamel/stargazers)
 
 ---
 
 ## 🚀 Introduction
-**[Enamel]** is a free, open-source Expert Advisor for **MetaTrader 5 (MT5)**.  
-It is designed to **[trade selected USD pairs, using a "Trend Pullback" strategy, giving users full customization over its parameters in both trade logic and risk management]**.
+**Enamel** is a free, open-source Expert Advisor for **MetaTrader 5 (MT5)**.  
+It is designed to **trade selected USD pairs, using a "Trend Pullback" strategy, giving users full customization over its parameters both in trading logic and risk management**.
 
 ✅ Free to use  
 ✅ Open-source

@@ -37,4 +37,18 @@ or install the pre-compiled `.ex5` Expert Advisors using the instructions below.
    ` MQL5/Exeprts/ `  
 4. Restart MetaTrader 5 (or right-click Navigator → Refresh).  
 5. The EA will appear under Navigator → Expert Advisors.  
-✅ You now have succesfully installed the Expert Advisor! You can check below how to use and optimize it.  
+✅ You now have succesfully installed the Expert Advisor! You can check below how to use and optimize it.
+
+### 💻 Compiling your own EA  
+1. Clone this repository or download the `.zip`:  
+   ```bash
+   git clone https://github.com/DocProvolone/Enamel  
+2. Open MetaEditor 5 and locate your ` .mq5 ` file using the navigator menu.  
+3. Feel free to customize and apply any sorts of modifications you'd like!  
+4. In the upper menu, select "compile".  
+5. You will be asked if you' d like or not to "Optimize" before compiling, you can find out more about MQL5 on-IDE optimization here: https://www.metatrader5.com/en/metaeditor/help/mql5storage/projects#properties  
+6. You should now choose which instruction set to use for compiling.  
+   MQL5 offers 3 different Intel Advanced Vector Extensions (AVX) instruction sets or a X64 regular one. You can find out more on Intel's official website  
+   If wondering about your producer instructions sets compatibility, you can use free tools such as CPU-Z (link: https://www.cpuid.com/softwares/cpu-z.html)  
+7. After compiling successfully, you can now use and optimize the EA!  
+

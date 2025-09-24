@@ -113,4 +113,3 @@ or install the pre-compiled `.ex5` Expert Advisors using the instructions below.
       | 💱Risk Management | BreakEvenBufferPips | Buffer in pips added to breakeven stop placement. |
       | ❔Misc. | EnableDebugLogs | Print extra logs for debugging (may affect performance). |
       | 🔮MAGIC | MagicNumber | Unique magic number for tracking EA trades. |
-           

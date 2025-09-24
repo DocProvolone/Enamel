@@ -59,57 +59,95 @@ or install the pre-compiled `.ex5` Expert Advisors using the instructions below.
 ⚠️ **Caution:** It is highly recommended to first tune and optimize parameters BEFORE using the EA. It is also *highgly* recommended to first test the EA in a DEMO scenario for several time before switching to live-trading.  
     Expert Advisors are a magnificent and powerfull tool, use them with responsibility.  
     ---  
-    ## 🔢 Input parameters  
+     🔢 **Input parameters**  
     Enamel is full of input parameters that you can either optimize using MetaTtrader's built-in strategy tester, or finding the best values for your trading manually.  
     Below is a detailed table of the input parameters found in the latest version of the Enamel EA.  
 
     
-  | Group | Input | Description |
+  | **Group** | **Input** | **Description** |
   |---|---|---|
   | 🔐LiveLock | AllowLiveTrading | Enable or disable live trading (safety toggle). |
-  | 🚧Indicators Settings | TimeFrame | Timeframe used for most indicators and trading logic. |
-  | 🚧Indicators Settings | FastEMAPeriod | Period for the fast EMA in trend detection. |
-  | 🚧Indicators Settings | SlowEMAPeriod | Period for the slow EMA in trend detection. |
-  | 🚧Indicators Settings | RSIPeriod | Period for RSI calculation. |
-  | 🚧Indicators Settings | RSIOverbought | Upper RSI threshold to detect overbought conditions. |
-  | 🚧Indicators Settings | RSIOversold | Lower RSI threshold to detect oversold conditions. |
-  | 🚧Indicators Settings | MACDFastEMA | Fast EMA for MACD. |
-  | 🚧Indicators Settings | MACDSlowEMA | Slow EMA for MACD. |
-  | 🚧Indicators Settings | MACDSignalEMA | Signal line period (SMA) for MACD. |
-  | 🚧Indicators Settings | ATRPeriod | ATR period used for SL, TP, and filters. |
-  | 🚧Indicators Settings | ATRMultiplier | Multiplier applied to ATR to define stop loss distance. |
-  | 🚧Indicators Settings | ADXPeriod | Period for ADX used to detect trending vs ranging market. |
-  | 🚧Indicators Settings | ADXThreshold | Minimum ADX value to consider market as trending. |
-  | 🚧Indicators Settings | BBPeriod | Period for Bollinger Bands used in regime detection. |
-  | 🚧Indicators Settings | BB_Width_ Threshold | Minimum normalized width between BBands to consider market volatile/trending. |
-  | 🚧Indicators Settings | UseCandle Confirmation | Whether to require large candle body (vs ATR) as confirmation before entry. |
-  | 🚧Indicators Settings | MinCandleBody ATRRatio | Minimum candle body size as ratio of ATR to confirm signal. |
-  | 🚧Indicators Settings | UseHTFTrendFilter | Enable higher timeframe trend filter (EMA-based). |
-  | 🚧Indicators Settings | HTFTrendTimeframe | Higher timeframe used for trend filter. |
-  | 🚧Indicators Settings | HTFTrendEMA Period | EMA period for HTF trend filter. |
-  | 🕗Trading Hours Settings | UseTradeHours | Enable time-based trading restrictions. |
-  | 🕗Trading Hours Settings | TradeHourStart | Start hour for trade window (0–23). |
-  | 🕗Trading Hours Settings | TradeHourEnd | End hour for trade window (0–23). |
-  | 🕗Trading Hours Settings | UseTradeTimeout | Enable trade timeout feature. |
-  | 🕗Trading Hours Settings | TimeoutBars | Number of bars after which a trade is closed if still open. |
-  | 🕗Trading Hours Settings | UseFridayFilter | Avoid opening trades late on Fridays. |
-  | 🕗Trading Hours Settings | FridayCutoffHour | Hour after which no new trades will be opened on Fridays. |
-  | 💱Risk Management | UseReverseSignal Exit | Close trade early if a reverse signal occurs. |
-  | 💱Risk Management | LotSize | Fixed lot size when dynamic lot sizing is disabled. |
-  | 💱Risk Management | UseDynamicLot Sizing | Enable dynamic lot sizing based on risk %. |
-  | 💱Risk Management | RiskPercent | Risk per trade as % of account balance. |
-  | 💱Risk Management | MaxAllowedLot | Maximum allowed lot size to prevent over-sizing. |
-  | 💱Risk Management | UsePartialExit | Enable partial position closure when certain profit threshold is reached. |
-  | 💱Risk Management | PartialExitPercent | Percentage of position to close during partial exit. |
-  | 💱Risk Management | PartialTriggerATR | How many ATRs of profit to trigger partial exit. |
-  | 💱Risk Management | UseAdaptiveTP | Use TP that adjusts based on SL and market volatility. |
-  | 💱Risk Management | TPRatio | Ratio of TP to SL (used when adaptive TP is enabled). |
-  | 💱Risk Management | UseTrailingStop | Enable stepped trailing stop logic. |
-  | 💱Risk Management | TrailingStepPips | Minimum distance in pips to move trailing stop after price moves. |
-  | 💱Risk Management | MaxDrawdownPercent | Prevent new trades if drawdown exceeds this % of account balance. |
-  | 💱Risk Management | MaxSpreadPips | Maximum spread in pips allowed for trade entry. |
-  | 💱Risk Management | UseBreakEven | Enable breakeven logic after trade moves in favor. |
-  | 💱Risk Management | BreakEvenTriggerATR | Profit threshold (in ATR) to trigger breakeven move. |
-  | 💱Risk Management | BreakEvenBufferPips | Buffer in pips added to breakeven stop placement. |
-  | ❔Misc. | EnableDebugLogs | Print extra logs for debugging (may affect performance). |
-  | 🔮MAGIC | MagicNumber | Unique magic number for tracking EA trades. |
+  | 🚧Indicators Settings | `TimeFrame` | Timeframe used for most indicators and trading logic. |
+  | 🚧Indicators Settings | `FastEMAPeriod` | Period for the fast EMA in trend detection. |
+  | 🚧Indicators Settings | `SlowEMAPeriod` | Period for the slow EMA in trend detection. |
+  | 🚧Indicators Settings | `RSIPeriod` | Period for RSI calculation. |
+  | 🚧Indicators Settings | `RSIOverbought` | Upper RSI threshold to detect overbought conditions. |
+  | 🚧Indicators Settings | `RSIOversold` | Lower RSI threshold to detect oversold conditions. |
+  | 🚧Indicators Settings | `MACDFastEMA` | Fast EMA for MACD. |
+  | 🚧Indicators Settings | `MACDSlowEMA` | Slow EMA for MACD. |
+  | 🚧Indicators Settings | `MACDSignalEMA` | Signal line period (SMA) for MACD. |
+  | 🚧Indicators Settings | `ATRPeriod` | ATR period used for SL, TP, and filters. |
+  | 🚧Indicators Settings | `ATRMultiplier` | Multiplier applied to ATR to define stop loss distance. |
+  | 🚧Indicators Settings | `ADXPeriod` | Period for ADX used to detect trending vs ranging market. |
+  | 🚧Indicators Settings | `ADXThreshold` | Minimum ADX value to consider market as trending. |
+  | 🚧Indicators Settings | `BBPeriod` | Period for Bollinger Bands used in regime detection. |
+  | 🚧Indicators Settings | `BB_Width_ Threshold` | Minimum normalized width between BBands to consider market volatile/trending. |
+  | 🚧Indicators Settings | `UseCandle Confirmation` | Whether to require large candle body (vs ATR) as confirmation before entry. |
+  | 🚧Indicators Settings | `MinCandleBody ATRRatio` | Minimum candle body size as ratio of ATR to confirm signal. |
+  | 🚧Indicators Settings | `UseHTFTrendFilter` | Enable higher timeframe trend filter (EMA-based). |
+  | 🚧Indicators Settings | `HTFTrendTimeframe` | Higher timeframe used for trend filter. |
+  | 🚧Indicators Settings | `HTFTrendEMA Period` | EMA period for HTF trend filter. |
+  | 🕗Trading Hours Settings | `UseTradeHours` | Enable time-based trading restrictions. |
+  | 🕗Trading Hours Settings | `TradeHourStart` | Start hour for trade window (0–23). |
+  | 🕗Trading Hours Settings | `TradeHourEnd` | End hour for trade window (0–23). |
+  | 🕗Trading Hours Settings | `UseTradeTimeout` | Enable trade timeout feature. |
+  | 🕗Trading Hours Settings | `TimeoutBars` | Number of bars after which a trade is closed if still open. |
+  | 🕗Trading Hours Settings | `UseFridayFilter` | Avoid opening trades late on Fridays. |
+  | 🕗Trading Hours Settings | `FridayCutoffHour` | Hour after which no new trades will be opened on Fridays. |
+  | 💱Risk Management | `UseReverseSignal Exit` | Close trade early if a reverse signal occurs. |
+  | 💱Risk Management | `LotSize` | Fixed lot size when dynamic lot sizing is disabled. |
+  | 💱Risk Management | `UseDynamicLot Sizing` | Enable dynamic lot sizing based on risk %. |
+  | 💱Risk Management | `RiskPercent` | Risk per trade as % of account balance. |
+  | 💱Risk Management | `MaxAllowedLot` | Maximum allowed lot size to prevent over-sizing. |
+  | 💱Risk Management | `UsePartialExit` | Enable partial position closure when certain profit threshold is reached. |
+  | 💱Risk Management | `PartialExitPercent` | Percentage of position to close during partial exit. |
+  | 💱Risk Management | `PartialTriggerATR` | How many ATRs of profit to trigger partial exit. |
+  | 💱Risk Management | `UseAdaptiveTP` | Use TP that adjusts based on SL and market volatility. |
+  | 💱Risk Management | `TPRatio` | Ratio of TP to SL (used when adaptive TP is enabled). |
+  | 💱Risk Management | `UseTrailingStop` | Enable stepped trailing stop logic. |
+  | 💱Risk Management | `TrailingStepPips` | Minimum distance in pips to move trailing stop after price moves. |
+  | 💱Risk Management | `MaxDrawdownPercent` | Prevent new trades if drawdown exceeds this % of account balance. |
+  | 💱Risk Management | `MaxSpreadPips` | Maximum spread in pips allowed for trade entry. |
+  | 💱Risk Management | `UseBreakEven` | Enable breakeven logic after trade moves in favor. |
+  | 💱Risk Management | `BreakEvenTriggerATR` | Profit threshold (in ATR) to trigger breakeven move. |
+  | 💱Risk Management | `BreakEvenBufferPips` | Buffer in pips added to breakeven stop placement. |
+  | ❔Misc. | `EnableDebugLogs` | Print extra logs for debugging (may affect performance). |
+  | 🔮MAGIC | `MagicNumber` | Unique magic number for tracking EA trades. |
+
+  ---  
+  ## 📊 Optimizing the EA  
+  
+  The Expert Advisor officially supports the MetaTrader strategy tester, and i do highly encourage using it.  
+  Enamel has a built-in `OnTester()` strategy that uses the following logic to deliver accurate and robust optimization results.  
+    
+  The scoring starts with a "Sanity Check":  
+  `if(dd_pct <= 0.0 || trades < 10 || pf < 1.0) return 0.0;`  
+  💠 If drawdown is 0 or negative (invalid or meaningless),  
+  💠 or fewer that 10 trades were taken (not statistically valid),  
+  💠 or Profit Factor is <1.0 (a losing strategy),  
+  ➡️ then return a score of `0.0`. This avoids "lucy but bad" setups.  
+
+  The score is then calculated using the custom built formula:  
+  `score = (profit / dd_pct) * 0.7
+      + pf * 0.2
+      + expect * MathLog(trades + 1) * 0.1;`
+   How it works:  
+   | **Component** | **Meaning** |
+   |---|---|
+   | `profit / dd_pct` | **Return per % of drawdown** (core risk-adjusted metric) |
+   | `*0.7` | **This metric is weighted the most** - it rewards high risk-efficiency |
+   | `pf *0.2` | **Profit Factor**, moderate weight, favors more efficient strategies |
+   | `expect *log (trades +1) * 0.1` | **Expect payoff * log of trades** - rewards consistency + enough data |  
+
+   **🧮 Why should you choose this formula?**  
+   This formula is a balanced approach to scoring that avoids overfitting:  
+   1. Encourage profitability *and* risk management
+   2. Penalizes setups that:
+         Overtrade with poor outcomes
+         Don't trade enough
+         Have high drawdown relative to profits
+
+   **📂 Additional CSV Export**  
+   Additionaly, the `OnTester()` function, exports past optimization results in an organized CSV inside the EA folder.
+   
+     

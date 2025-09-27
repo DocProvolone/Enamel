@@ -58,15 +58,15 @@ or install the pre-compiled `.ex5` Expert Advisors using the instructions below.
 
 ⚠️ **Caution:** It is highly recommended to first tune and optimize parameters BEFORE using the EA. It is also *highgly* recommended to first test the EA in a DEMO scenario for several time before switching to live-trading.  
     Expert Advisors are a magnificent and powerfull tool, use them with responsibility.  
-    ---  
-     🔢 **Input parameters**  
-    Enamel is full of input parameters that you can either optimize using MetaTtrader's built-in strategy tester, or finding the best values for your trading manually.  
-    Below is a detailed table of the input parameters found in the latest version of the Enamel EA.  
+---  
+🔢 **Input parameters**  
+Enamel is full of input parameters that you can either optimize using MetaTtrader's built-in strategy tester, or finding the best values for your trading manually.  
+Below is a detailed table of the input parameters found in the latest version of the Enamel EA.  
 
     
   | **Group** | **Input** | **Description** |
   |---|---|---|
-  | 🔐LiveLock | AllowLiveTrading | Enable or disable live trading (safety toggle). |
+  | 🔐LiveLock | `AllowLiveTrading` | Enable or disable live trading (safety toggle). |
   | 🚧Indicators Settings | `TimeFrame` | Timeframe used for most indicators and trading logic. |
   | 🚧Indicators Settings | `FastEMAPeriod` | Period for the fast EMA in trend detection. |
   | 🚧Indicators Settings | `SlowEMAPeriod` | Period for the slow EMA in trend detection. |
@@ -148,6 +148,18 @@ or install the pre-compiled `.ex5` Expert Advisors using the instructions below.
          Have high drawdown relative to profits
 
    **📂 Additional CSV Export**  
-   Additionaly, the `OnTester()` function, exports past optimization results in an organized CSV inside the EA folder.
-   
-     
+   Additionaly, the `OnTester()` function, exports past optimization results in an organized CSV file (`Roaming> MetaQuotes> Tester> YourTerminalID> Agent-x.x.x.x-xxxx> MQL5> Files >enamel_opt.csv`).  
+   ### 🤖 Setting up the Strategy Tester  
+   In the Strategy Tester window you will have to make your ordinary configuration choices, such as a `Symbol`, `Chart Timeframe`, `Date`, `Forward`, etc...  
+   <img width="849" height="411" alt="optimizing_0" src="https://github.com/user-attachments/assets/75ddecaa-ad9e-4a9f-abd3-3e2d3e989c9a" />
+  
+   While optimizing, it is recommended to have:  
+   | **⚙️Setting** | **🔧Ideal** |
+   |---|---|
+   | `Forward` | At least 1/3  |
+   | `TimeFrame` | Either M5 or M15 |
+   | `Modelling` | Every tick based on real ticks |
+   | `Profit in pips for...` | True |
+   | `Optimization` | Recommended 'Slow complete' if time is not an issue. 'Custom Max' criterion is highly advised. |
+
+  It is recommended not to optimize every parameter you're interested in at once, to avoid overfitting and to cut optimization run times.
